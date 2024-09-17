@@ -17,7 +17,7 @@
     git checkout -b "lab-3" 
     ```
 
-### Lab
+### Lab - Part 1
 In order to connect to a database, you need to _have_ a database. We'll be creating our database in Postgres, so go ahead and download pgAdmin4: https://www.pgadmin.org/download/
 
 Open the application and follow the set-up instructions. You'll have to set a password for the user `postgres`. **Remember this password.** Once you're set up, you can create your database by following these instructions:
@@ -85,19 +85,18 @@ However, you don't necessarily want this information available for the world to 
 
 **A `.env` file is a hidden file used to store configuration settings and environment variables that you don’t want shared/seen in your code.** When you create and use a `.env` file, you have to make sure that `.env` is included in your `.gitignore`. I've already done this for you, but if you want to take a look, check out line 27 in the repo .gitignore file.
 
-Create a new file in the lab-3 directory and name it `.env`. Copy and paste the following code into your .env file, replacing \<your password> with the password you created when you went through the pgAdmin4 set up steps and \<your name> with your full name.
+Create a new file in the lab-3 directory and name it `.env`. Copy and paste the following code into your .env file, replacing \<your password> with the password you created when you went through the pgAdmin4 set up steps.
 
 ```bash
 db_name = marist
 db_owner = postgres
 db_pass = <your password>
-name = <your name>
 ```
 These values will be substituted into the database connection code after they have imported in by the `dotenv` module.
 
 So, you add your variables to your `.env` file and no one can see them except you. Those variables are then imported into your code using the `dotenv` package, which references the variables by their `key` (think key = value syntax).
 
-Review the code in the `db.py` module, but do not change anything. After reviewing the code, run the `app.py` script.  
+Review the code in the `lab-3/db/db.py` module, but do not change anything. After reviewing the code, run the `app.py` script.  
 
 ```bash
 python3 app.py
@@ -107,13 +106,49 @@ python app.py
 
 If you have successfully connected to your database, you will see the following message in your terminal:
 ```bash
----------- Connection successful!
- * Serving Flask app 'db'
+----------- Connection successful!
+ * Connected to database: marist
+ * Serving Flask app 'db.db'
  * Debug mode: on
 ``` 
 
-**SUBMISSION:** Lastly, create a text file named `output.txt`, then copy the success message you see in your terminal and paste it into `output.txt`.
+### Lab - Part 2
+Once you've established a connection to the database, you can begin creating tables. Since we are using SQLAlchemy, we can create a python class, and SQLAlchemy will convert that class into a table. 
 
+When you ran the application, a `courses` table was created for you. To see it, go into pgAdmin4, click the arrow next to the `marist` database to expand it > `Schemas` > `Tables` > `courses`
+
+Review the code in `lab-3/db/schema/course.py`. Then, using that code as an example, create a class in `lab-3/db/schema/professor.py` that contains columns for a **professor's first name, last name, and email address**. The class has already been started for you.
+
+After creating the class, go to `la-3/db/db.py` and uncomment line 25. **Then, save your changes.**
+
+Go back to pgAdmin4, right click on `Tables` in the marist database schema, and click `Refresh`. You should now see the `professors` table.
+
+Now, let's think about the relationship between the two tables. For this example, let's assume that professors can teach many classes and that courses are taught by many professors (e.g. there are many professors who can teach SD2).
+
+A many to many relationship means we need to create an association/join table. In flask, there are two methods to accomplish this:
+1. Core Table object: Table():  
+    Used when only foreign keys will be stored in the table  
+2. Association object pattern  
+    Used when foreign keys AND additional data will be stored in the table
+
+In this case, we just want the course foreign key and the professor foreign key. We don't want to store any additional information, so we are going with option 1.
+
+The association table has been created for you in `lab-3/db/schema/assoc.py`. Go ahead and review it, then uncomment line 27 in `lab-3/db/db.py`. 
+
+**Save your changes**, then, go to pgAdmin4, right click on `Tables` and hit `Refresh`. You should see your association table.
+
+Lastly, right click on the `marist` database and click `ERD for Database`. You should see an ERD containing the three tables you just created.
+
+**Take a screenshot of the ERD and drag & drop it into the lab-3 directory.**
+
+Don't forget to deactivate your virtual environment!
+```bash
+deactivate
+# or
+.venv/Scripts/deactivate.bat
+```
+
+### Submission
 Once you have completed this lab, push your work to Github, then open a pull request, assign me as a reviewer, copy the pull request URL, and paste it in Brightspace.
 
 ```bash
@@ -122,11 +157,4 @@ git commit -m "completed lab 3"
 git push --set-upstream origin lab-3
 # or
 git push
-```
-
-Don't forget to deactivate your virtual environment!
-```bash
-deactivate
-# or
-.venv/Scripts/deactivate.bat
 ```
