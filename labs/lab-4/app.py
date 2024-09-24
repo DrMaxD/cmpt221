@@ -3,7 +3,7 @@ from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import text, insert
 
-from db.database import *
+from server import *
 
 # create a webpage based off of the html in templates/index.html
 # not required: if you want to play around with some html, feel free
