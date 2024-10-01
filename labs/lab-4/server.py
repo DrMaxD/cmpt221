@@ -17,7 +17,11 @@ db_pass: str = os.getenv('db_pass')
 db_uri: str = f"postgresql://{db_owner}:{db_pass}@localhost/{db_name}"
 
 # create the flask application & connect to db
+<<<<<<< HEAD
+app = Flask(__name__, template_folder='templates')
+=======
 app = Flask(__name__)
+>>>>>>> main
 app.config["SQLALCHEMY_DATABASE_URI"] = db_uri
 db = SQLAlchemy(app)
 
