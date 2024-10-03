@@ -1,4 +1,4 @@
-## Lab #4 - Writing SQL Queries
+git ## Lab #4 - Writing SQL Queries
 ### Prerequesites
 - Lab 3 must be complete.  
 
@@ -90,6 +90,6 @@ Once you have completed this lab, push your work to Github, then open a pull req
 git add .
 git commit -m "completed lab 4"
 git push --set-upstream origin lab-4
-# or
+# or #
 git push
 ```
