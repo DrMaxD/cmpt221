@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h2>Max Debin</h2>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('important') }}">IMPORTANT</a></li>
+                <li><a href="{{ url_for('thoughts') }}">THOUGHTS</a></li>
+                <li><a href="{{ url_for('doge') }}">DOGE</a></li>
+            </ul>
+        </nav>
+        <article>
+            <p>2DS rof 5 bal ym si siht</p>
+        </article>
+    </section>
+    <footer>
+    </footer>
+</body>
+</html>
