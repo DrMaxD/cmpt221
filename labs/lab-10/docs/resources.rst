@@ -6,40 +6,32 @@ This section describes class and functions private to <application-name>. It is 
 
 labs.lab-1
 ----------
-<Short description of Lab 1>
+Pull request
 
 labs.lab-2
 ----------
-<Short description of Lab 2>
-
+Virtual Enviroment
 labs.lab-3
 ----------
-<Short description of Lab 3>
-
+Postgres
 labs.lab-4
 ----------
-<Short description of Lab 4>
-
+Postgres Pt 2
 labs.lab-5
 ----------
-<Short description of Lab 5>
-
+Gui
 labs.lab-6
 ----------
-<Short description of Lab 6>
-
+Login
 labs.lab-7
 ----------
-<Short description of Lab 7>
-
+In Class
 labs.lab-8
 ----------
-<Short description of Lab 8>
-
+In Class
 labs.lab-9
 ----------
-<Short description of Lab 9>
-
+Pytest
 labs.lab-10
 -----------
-<Short description of Lab 10>
+This

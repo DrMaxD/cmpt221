@@ -2,10 +2,10 @@
 
 Introduction
 ============
-<tell the reader about the project>
+CMPT111
 
 Documentation
 -------------
 * `Document Page`_
 
-.. _Document Page: <link to github pages>
+.. _Document Page: https://github.com/DrMaxD/cmpt221.git

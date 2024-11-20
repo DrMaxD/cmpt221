@@ -6,15 +6,15 @@ This section describes some common issues that can arise and possible solutions.
 
 Issue #1
 --------
-<Decription>
-<Solution>
+Problem
+Fixed it
 
 Issue #2
 --------
-<Description>
-<Solution>
+Problem 2
+Fixed it again
 
 Issue #3
 --------
-<Description>
-<Solution>
+Problem 3
+Fixed it thrice
