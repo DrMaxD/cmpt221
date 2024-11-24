@@ -1,5 +1,16 @@
 /*
+<<<<<<< HEAD
  * Sphinx JavaScript utilities for the full-text search.
+=======
+ * searchtools.js
+ * ~~~~~~~~~~~~~~~~
+ *
+ * Sphinx JavaScript utilities for the full-text search.
+ *
+ * :copyright: Copyright 2007-2024 by the Sphinx team, see AUTHORS.
+ * :license: BSD, see LICENSE for details.
+ *
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
  */
 "use strict";
 
@@ -13,7 +24,11 @@ if (typeof Scorer === "undefined") {
     // and returns the new score.
     /*
     score: result => {
+<<<<<<< HEAD
       const [docname, title, anchor, descr, score, filename, kind] = result
+=======
+      const [docname, title, anchor, descr, score, filename] = result
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
       return score
     },
     */
@@ -40,6 +55,7 @@ if (typeof Scorer === "undefined") {
   };
 }
 
+<<<<<<< HEAD
 // Global search result kind enum, used by themes to style search results.
 class SearchResultKind {
     static get index() { return  "index"; }
@@ -48,6 +64,8 @@ class SearchResultKind {
     static get title() { return "title"; }
 }
 
+=======
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
 const _removeChildren = (element) => {
   while (element && element.lastChild) element.removeChild(element.lastChild);
 };
@@ -65,6 +83,7 @@ const _displayItem = (item, searchTerms, highlightTerms) => {
   const showSearchSummary = DOCUMENTATION_OPTIONS.SHOW_SEARCH_SUMMARY;
   const contentRoot = document.documentElement.dataset.content_root;
 
+<<<<<<< HEAD
   const [docName, title, anchor, descr, score, _filename, kind] = item;
 
   let listItem = document.createElement("li");
@@ -72,6 +91,11 @@ const _displayItem = (item, searchTerms, highlightTerms) => {
   // can be used by a theme's CSS selector for styling
   // See SearchResultKind for the class names.
   listItem.classList.add(`kind-${kind}`);
+=======
+  const [docName, title, anchor, descr, score, _filename] = item;
+
+  let listItem = document.createElement("li");
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
   let requestUrl;
   let linkUrl;
   if (docBuilder === "dirhtml") {
@@ -120,10 +144,15 @@ const _finishSearch = (resultCount) => {
       "Your search did not match any documents. Please make sure that all words are spelled correctly and that you've selected enough categories."
     );
   else
+<<<<<<< HEAD
     Search.status.innerText = Documentation.ngettext(
       "Search finished, found one page matching the search query.",
       "Search finished, found ${resultCount} pages matching the search query.",
       resultCount,
+=======
+    Search.status.innerText = _(
+      "Search finished, found ${resultCount} page(s) matching the search query."
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
     ).replace('${resultCount}', resultCount);
 };
 const _displayNextItem = (
@@ -145,7 +174,11 @@ const _displayNextItem = (
   else _finishSearch(resultCount);
 };
 // Helper function used by query() to order search results.
+<<<<<<< HEAD
 // Each input is an array of [docname, title, anchor, descr, score, filename, kind].
+=======
+// Each input is an array of [docname, title, anchor, descr, score, filename].
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
 // Order the results by score (in opposite order of appearance, since the
 // `_displayNextItem` function uses pop() to retrieve items) and then alphabetically.
 const _orderResultsByScoreThenName = (a, b) => {
@@ -255,7 +288,10 @@ const Search = {
     searchSummary.classList.add("search-summary");
     searchSummary.innerText = "";
     const searchList = document.createElement("ul");
+<<<<<<< HEAD
     searchList.setAttribute("role", "list");
+=======
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
     searchList.classList.add("search");
 
     const out = document.getElementById("search-results");
@@ -326,7 +362,11 @@ const Search = {
     const indexEntries = Search._index.indexentries;
 
     // Collect multiple result groups to be sorted separately and then ordered.
+<<<<<<< HEAD
     // Each is an array of [docname, title, anchor, descr, score, filename, kind].
+=======
+    // Each is an array of [docname, title, anchor, descr, score, filename].
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
     const normalResults = [];
     const nonMainIndexResults = [];
 
@@ -345,7 +385,10 @@ const Search = {
             null,
             score + boost,
             filenames[file],
+<<<<<<< HEAD
             SearchResultKind.title,
+=======
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
           ]);
         }
       }
@@ -363,7 +406,10 @@ const Search = {
             null,
             score,
             filenames[file],
+<<<<<<< HEAD
             SearchResultKind.index,
+=======
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
           ];
           if (isMain) {
             normalResults.push(result);
@@ -485,7 +531,10 @@ const Search = {
         descr,
         score,
         filenames[match[0]],
+<<<<<<< HEAD
         SearchResultKind.object,
+=======
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
       ]);
     };
     Object.keys(objects).forEach((prefix) =>
@@ -596,7 +645,10 @@ const Search = {
         null,
         score,
         filenames[file],
+<<<<<<< HEAD
         SearchResultKind.text,
+=======
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
       ]);
     }
     return results;

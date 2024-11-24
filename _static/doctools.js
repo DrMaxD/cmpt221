@@ -1,5 +1,16 @@
 /*
+<<<<<<< HEAD
  * Base JavaScript utilities for all Sphinx HTML documentation.
+=======
+ * doctools.js
+ * ~~~~~~~~~~~
+ *
+ * Base JavaScript utilities for all Sphinx HTML documentation.
+ *
+ * :copyright: Copyright 2007-2024 by the Sphinx team, see AUTHORS.
+ * :license: BSD, see LICENSE for details.
+ *
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
  */
 "use strict";
 

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+@import url("basic.css");
+
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
 /* -- page layout ----------------------------------------------------------- */
 
 body {
@@ -158,8 +163,13 @@ div.sphinxsidebar input {
     font-size: 1em;
 }
 
+<<<<<<< HEAD
 div.sphinxsidebar #searchbox {
     margin: 1em 0;
+=======
+div.sphinxsidebar #searchbox input[type="text"] {
+    width: 160px;
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
 }
 
 div.sphinxsidebar .search > div {
@@ -261,6 +271,13 @@ div.admonition p.last {
     margin-bottom: 0;
 }
 
+<<<<<<< HEAD
+=======
+div.highlight {
+    background-color: #fff;
+}
+
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
 dt:target, .highlight {
     background: #FAF3E8;
 }
@@ -448,7 +465,11 @@ ul, ol {
 }
 
 pre {
+<<<<<<< HEAD
     background: unset;
+=======
+    background: #EEE;
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
     padding: 7px 30px;
     margin: 15px 0px;
     line-height: 1.3em;
@@ -479,15 +500,25 @@ a.reference {
     border-bottom: 1px dotted #004B6B;
 }
 
+<<<<<<< HEAD
 a.reference:hover {
     border-bottom: 1px solid #6D4100;
 }
 
+=======
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
 /* Don't put an underline on images */
 a.image-reference, a.image-reference:hover {
     border-bottom: none;
 }
 
+<<<<<<< HEAD
+=======
+a.reference:hover {
+    border-bottom: 1px solid #6D4100;
+}
+
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
 a.footnote-reference {
     text-decoration: none;
     font-size: 0.7em;
@@ -503,7 +534,72 @@ a:hover tt, a:hover code {
     background: #EEE;
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 940px) {
+=======
+
+@media screen and (max-width: 870px) {
+
+    div.sphinxsidebar {
+    	display: none;
+    }
+
+    div.document {
+       width: 100%;
+
+    }
+
+    div.documentwrapper {
+    	margin-left: 0;
+    	margin-top: 0;
+    	margin-right: 0;
+    	margin-bottom: 0;
+    }
+
+    div.bodywrapper {
+    	margin-top: 0;
+    	margin-right: 0;
+    	margin-bottom: 0;
+    	margin-left: 0;
+    }
+
+    ul {
+    	margin-left: 0;
+    }
+
+	li > ul {
+        /* Matches the 30px from the "ul, ol" selector above */
+		margin-left: 30px;
+	}
+
+    .document {
+    	width: auto;
+    }
+
+    .footer {
+    	width: auto;
+    }
+
+    .bodywrapper {
+    	margin: 0;
+    }
+
+    .footer {
+    	width: auto;
+    }
+
+    .github {
+        display: none;
+    }
+
+
+
+}
+
+
+
+@media screen and (max-width: 875px) {
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
 
     body {
         margin: 0;
@@ -513,16 +609,23 @@ a:hover tt, a:hover code {
     div.documentwrapper {
         float: none;
         background: #fff;
+<<<<<<< HEAD
         margin-left: 0;
         margin-top: 0;
         margin-right: 0;
         margin-bottom: 0;
+=======
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
     }
 
     div.sphinxsidebar {
         display: block;
         float: none;
+<<<<<<< HEAD
         width: unset;
+=======
+        width: 102.5%;
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
         margin: 50px -30px -20px -30px;
         padding: 10px 20px;
         background: #333;
@@ -557,6 +660,7 @@ a:hover tt, a:hover code {
 
     div.body {
         min-height: 0;
+<<<<<<< HEAD
         min-width: auto; /* fixes width on small screens, breaks .hll */
         padding: 0;
     }
@@ -565,6 +669,10 @@ a:hover tt, a:hover code {
         /* "fixes" the breakage */
         width: max-content;
     }
+=======
+        padding: 0;
+    }
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
 
     .rtd_doc_footer {
         display: none;
@@ -578,6 +686,7 @@ a:hover tt, a:hover code {
         width: auto;
     }
 
+<<<<<<< HEAD
     .github {
         display: none;
     }
@@ -590,6 +699,15 @@ a:hover tt, a:hover code {
        /* Matches the 30px from the "ul, ol" selector above */
         margin-left: 30px;
     }
+=======
+    .footer {
+        width: auto;
+    }
+
+    .github {
+        display: none;
+    }
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
 }
 
 
@@ -653,6 +771,7 @@ nav#breadcrumbs li+li:before {
     div.related {
         display: none;
     }
+<<<<<<< HEAD
 }
 
 img.github  {
@@ -660,4 +779,6 @@ img.github  {
     top: 0;
     border: 0;
     right: 0;
+=======
+>>>>>>> a9dc6f83be54d9ce53393c85cc185a35d330a5ef
 }
