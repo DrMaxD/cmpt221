@@ -21,8 +21,13 @@ A `Python virtual environment`_ is recommended. Once the virtual environment is 
 
 .. code-block:: text
 
+<<<<<<< HEAD
     $ git clone https://github.com/DrMaxD/cmpt221.git
     $ cd CMPT221
+=======
+    $ git clone DrMaxD/cmpt221
+    $ cd cmpt221
+>>>>>>> 04197dea88b9179847fa87172db810e953b4deab
     $ pip install -r requirements.txt
 
 This will install all local prerequisites needed for ``<application-name>`` to run.

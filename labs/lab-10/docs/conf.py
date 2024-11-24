@@ -7,8 +7,13 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'CMPT221'
+<<<<<<< HEAD
 copyright = '2024, MaxD'
 author = 'MaxD'
+=======
+copyright = '2024, DrMaxD'
+author = 'DrMaxD'
+>>>>>>> 04197dea88b9179847fa87172db810e953b4deab
 release = '0.0.1'
 
 # -- General configuration ---------------------------------------------------

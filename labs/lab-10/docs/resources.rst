@@ -6,6 +6,7 @@ This section describes class and functions private to <application-name>. It is 
 
 labs.lab-1
 ----------
+<<<<<<< HEAD
 Intro lab to learn how to do pull requests
 
 labs.lab-2
@@ -43,3 +44,34 @@ Pytest to check for any issues that could run
 labs.lab-10
 -----------
 This Lab which is to create documentation for a project
+=======
+Pull request
+
+labs.lab-2
+----------
+Virtual Enviroment
+labs.lab-3
+----------
+Postgres
+labs.lab-4
+----------
+Postgres Pt 2
+labs.lab-5
+----------
+Gui
+labs.lab-6
+----------
+Login
+labs.lab-7
+----------
+In Class
+labs.lab-8
+----------
+In Class
+labs.lab-9
+----------
+Pytest
+labs.lab-10
+-----------
+This
+>>>>>>> 04197dea88b9179847fa87172db810e953b4deab

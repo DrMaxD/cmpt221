@@ -1,5 +1,9 @@
 .. CMPT221 documentation master file, created by
+<<<<<<< HEAD
    sphinx-quickstart on Sun Nov 24 11:33:31 2024.
+=======
+   sphinx-quickstart on Tue Nov 19 19:33:19 2024.
+>>>>>>> 04197dea88b9179847fa87172db810e953b4deab
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
@@ -13,9 +17,13 @@ documentation for details.
 
 .. toctree::
    :maxdepth: 2
+<<<<<<< HEAD
    :caption: 
    introduction.rst
    development.rst
    resources.rst
    troubleshooting.rst:
+=======
+   :caption: Contents:
+>>>>>>> 04197dea88b9179847fa87172db810e953b4deab
 
