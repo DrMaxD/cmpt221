@@ -1,0 +1,19 @@
+.. _`Introduction`:
+
+Introduction
+============
+<<<<<<< HEAD
+This is the website for Lab 10 for Software Development 2
+=======
+<tell the reader about the project>
+>>>>>>> 04197dea88b9179847fa87172db810e953b4deab
+
+Documentation
+-------------
+* `Document Page`_
+
+<<<<<<< HEAD
+.. _Document Page: https://github.com/DrMaxD/cmpt221.git
+=======
+.. _Document Page: <link to github pages>
+>>>>>>> 04197dea88b9179847fa87172db810e953b4deab
